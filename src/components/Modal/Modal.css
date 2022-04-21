@@ -1,0 +1,41 @@
+#modal{
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0, 0.75);
+}
+
+#modal-content {
+	position: relative;
+	margin: auto;
+	padding: 15px 50px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px 0px black;
+	background-color: white;
+}
+
+#close {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 98%;
+	bottom: 93%;
+	background-color: black;
+	outline: none;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+}
+
+img {
+	color: white;
+	width: 20px;
+	height: 20px;
+}
+
+
+

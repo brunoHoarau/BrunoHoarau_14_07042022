@@ -1,0 +1,22 @@
+.header-table {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main {
+	width: 90vw;
+	margin: auto;
+}
+
+table{
+	width: 100%;
+	flex-direction: column;
+}
+
+tr {
+	text-align: center;
+}
+
+tbody tr:nth-child(2n+1){
+	background: radial-gradient(circle, rgba(85,215,1,1) 0%, rgba(21,175,113,1) 100%);
+}
