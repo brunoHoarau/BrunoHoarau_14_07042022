@@ -1,0 +1,3 @@
+const accessor = [{name: "firstName", accessor: "firstName"}, {name: "Last Name", accessor:"lastName"}, {name:"Start Date",accessor:"startDate"}, {name: "Department", accessor:'department'},{name:"Date of Birth", accessor:"birthDate" }, {name: "Street", accessor: "street"}, {name: "City", accessor: "city"}, {name: "State", accessor: "state"}, {name: "Zip Code", accessor: "zipCode"}]
+
+export default accessor

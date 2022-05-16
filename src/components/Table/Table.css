@@ -11,6 +11,7 @@
 table{
 	width: 100%;
 	flex-direction: column;
+	margin: 20px auto;
 }
 
 tr {
@@ -18,5 +19,49 @@ tr {
 }
 
 tbody tr:nth-child(2n+1){
-	background: radial-gradient(circle, rgba(85,215,1,1) 0%, rgba(21,175,113,1) 100%);
+	background-color: lightgrey;
+}
+
+.tfooter {
+	display: flex;
+	justify-content: space-between
+}
+
+.pagination {
+	/* background-color: blue; */
+	display: flex;
+	width: max-content;
+	justify-content: end;
+}
+
+.current_employees_tab {
+	margin-top: 20px;
+	width: 100%;
+	height: 90vh;
+}
+
+.paginationDisable{
+	background: none;
+	border: 1px solid black;
+}
+
+.paginationUnable{
+	background-color: lightgrey;
+	color: black;
+	pointer-events: none;
+	width: 30px;
+	height: 30px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+th{
+	background-image: url('../../asset/sort.png');
+	background-position: right;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	padding: 5px 10px;
+	text-transform: none;
 }

@@ -4,7 +4,7 @@ import Button from '../components/Button/Button';
 import Modal from '../components/Modal/Modal';
 import { useSelector } from 'react-redux';
 
-const Home = () =>  {
+const CreateEmployee = () =>  {
 	const modal = useSelector( state => state.openModal)
 	  return(
         <>
@@ -15,14 +15,9 @@ const Home = () =>  {
               <Button />
 							{ modal ? 
 								<Modal 
-									h1="Titre Modal"
-									text="lorem opsum si vi passeum para belum se ve pace pour voir le responsive" 
+									text="Employee Created!" 
 									styleModal={{
-										backgroundColor: "",
-									}}
-									styleH1={{
-									}}
-									styleText={{
+										width: "250px"
 									}}
 								/> : ""
 							}
@@ -33,4 +28,4 @@ const Home = () =>  {
 	  )
 }
 
-export default Home;
+export default CreateEmployee;

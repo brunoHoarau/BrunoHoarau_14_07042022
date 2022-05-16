@@ -22,9 +22,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	left: 98%;
-	bottom: 93%;
+	left: 96%;
+	bottom: 90%;
 	background-color: black;
+	color: white;
 	outline: none;
 	border-radius: 50%;
 	height: 30px;

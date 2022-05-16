@@ -1,0 +1,11 @@
+.divLink {
+	display: flex;
+}
+.linkHome {
+	text-decoration: none;
+	/* background: radial-gradient(circle, rgba(85,215,1,1) 0%, rgba(21,175,113,1) 100%); */
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 20px auto;
+	/* color: white; */
+}

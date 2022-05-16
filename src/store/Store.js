@@ -112,6 +112,115 @@ const initState = {
 			"zipCode": 9000,
 			"birthDate": "2021-05-02",
 			"startDate": "2021-10-06"
+		},{
+			"department": "Legal",
+			"firstName": "Stein",
+			"lastName": "Lewis",
+			"street": "887 Furman Avenue",
+			"city": "Tuttle",
+			"state": "Maine",
+			"zipCode": 8419,
+			"birthDate": "2015-10-29",
+			"startDate": "2019-01-17"
+		},
+		{
+			"department": "Engineering",
+			"firstName": "Vickie",
+			"lastName": "Francis",
+			"street": "441 Malbone Street",
+			"city": "Canby",
+			"state": "Connecticut",
+			"zipCode": 3362,
+			"birthDate": "2020-07-31",
+			"startDate": "2016-05-15"
+		},
+		{
+			"department": "Marketing",
+			"firstName": "Stacie",
+			"lastName": "Melendez",
+			"street": "192 Highlawn Avenue",
+			"city": "Coventry",
+			"state": "Alaska",
+			"zipCode": 3704,
+			"birthDate": "2021-01-25",
+			"startDate": "2018-07-18"
+		},
+		{
+			"department": "Marketing",
+			"firstName": "Katina",
+			"lastName": "Gaines",
+			"street": "727 Prince Street",
+			"city": "Aguila",
+			"state": "South Carolina",
+			"zipCode": 9890,
+			"birthDate": "2020-01-15",
+			"startDate": "2022-04-10"
+		},
+		{
+			"department": "Legal",
+			"firstName": "Mercer",
+			"lastName": "Duncan",
+			"street": "250 Florence Avenue",
+			"city": "Wacissa",
+			"state": "Utah",
+			"zipCode": 9286,
+			"birthDate": "2020-01-20",
+			"startDate": "2018-03-02"
+		},
+		{
+			"department": "Sales",
+			"firstName": "Haney",
+			"lastName": "Chaney",
+			"street": "217 Broadway ",
+			"city": "Balm",
+			"state": "Puerto Rico",
+			"zipCode": 4125,
+			"birthDate": "2014-03-25",
+			"startDate": "2020-05-17"
+		},
+		{
+			"department": "Sales",
+			"firstName": "Tamara",
+			"lastName": "Albert",
+			"street": "872 Vandervoort Place",
+			"city": "Lynn",
+			"state": "American Samoa",
+			"zipCode": 1786,
+			"birthDate": "2019-04-06",
+			"startDate": "2014-08-18"
+		},
+		{
+			"department": "Engineering",
+			"firstName": "Lina",
+			"lastName": "Hicks",
+			"street": "368 Hendrickson Place",
+			"city": "Caledonia",
+			"state": "Guam",
+			"zipCode": 7391,
+			"birthDate": "2014-07-28",
+			"startDate": "2015-10-29"
+		},
+		{
+			"department": "Marketing",
+			"firstName": "Nancy",
+			"lastName": "Dale",
+			"street": "801 Clay Street",
+			"city": "Emison",
+			"state": "Oregon",
+			"zipCode": 3643,
+			"birthDate": "2021-09-13",
+			"startDate": "2017-11-28"
+		},
+		{
+			"department": "Engineering",
+			"firstName": "Noelle",
+			"lastName": "Anderson",
+			"street": "105 Fiske Place",
+			"city": "Westerville",
+			"state": "Idaho",
+			"zipCode": 3479,
+			"birthDate": "2020-10-06",
+			"startDate": "2015-05-19"
 		}
 	],
 	openModal: false

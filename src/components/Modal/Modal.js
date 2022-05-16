@@ -3,14 +3,16 @@ import { useDispatch } from 'react-redux'
 import Close from '../../asset/close.png'
 import { Close_Modal } from '../../actions/Actions'
 
-const Modal = (props) => {
+const Modal = ({h1,text,bgModal,styleModal,styleH1,styleText,styleButton}) => {
 
 	const dispatch = useDispatch()
 
 	const styles = {
-		modal: props.styleModal,
-		styleH1: props.styleH1,
-		styleText: props.styleText
+		bgModal: bgModal,
+		modal: styleModal,
+		styleH1: styleH1,
+		styleText: styleText,
+		styleButton: styleButton
 	}
 
 	const closeModal = () =>{
@@ -18,11 +20,11 @@ const Modal = (props) => {
 	}
 
 	return(
-		<div id='modal' >
+		<div id='modal' style={styles.bgModal} >
 			<div id="modal-content" style={styles.modal}>
-				{ props.h1 ? <h1 style={styles.styleH1}>{props.h1}</h1> : ""}
-				{ props.text ? <p style={styles.styleText}>{props.text}</p> : ""}
-				<button id="close" onClick={() => closeModal()} ><img src={Close} alt="X" /></button>
+				{ h1 ? <h1 style={styles.styleH1}>{h1}</h1> : ""}
+				{ text ? <p style={styles.styleText}>{text}</p> : ""}
+				<button id="close" style={styles.styleButton} onClick={() => closeModal()}>X</button>
 			</div>
 		</div>
 	)

@@ -1,11 +1,11 @@
-import Home from "../pages/Home"
+import CreateEmployee from "../pages/CreateEmployee"
 import EmployeesList from "../pages/EmployeesList"
 import { Routes, Route, Navigate } from "react-router-dom"
 
 const routesApp = [
 	{
 		path: "/",
-		page: <Home />
+		page: <CreateEmployee />
 	},{
 		path: "/employee-list",
 		page: <EmployeesList/>

@@ -5,21 +5,22 @@ main{
 
 form{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
-	background: radial-gradient(circle, rgba(85,215,1,1) 0%, rgba(21,175,113,1) 100%);
-	border-radius: 10px;
+	/* background: radial-gradient(circle, rgba(85,215,1,1) 0%, rgba(21,175,113,1) 100%); */
+	/* border-radius: 10px; */
 	padding: 20px;
 }
 
 fieldset{
 	border-radius: 10px;
 	margin: 10px 0;
-	color: white;
-	border-color: white;
+	/* color: white; */
+	/* border-color: white; */
 }
 
 legend, fieldset ~ label{
-	color: white;
+	/* color: white; */
 	font-size: large;
 }
 
@@ -40,12 +41,11 @@ fieldset input {
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
-	margin: 10px 0px;
+	margin: 5px 0px;
 }
 
-input, select {
-	border: none;
-	padding: 15px 10px;
+form input, form select {
+
 	outline: none;
 	border-radius: 5px;
 }
@@ -53,20 +53,13 @@ input, select {
 input ~ label {
 	position: absolute;
 	display: flex;
-	color: #95A5A6;
-	transform: translate3D(15px,-12px, 0px);
 }
 
 input ~ label , select ~ label{
 	position: relative;
-	color: white;
-	background: radial-gradient(circle, rgba(1,215,80,1) 0%, rgba(21,175,113,1) 46%);
-	/* border: 1px solid white; */
 	border-radius: 5px;
 	width: fit-content;
 	padding: 2px 5px;
-	transform-origin: 0 50%;
-	transform: translate3D(10px,10px,0)
 }
 
 thead {

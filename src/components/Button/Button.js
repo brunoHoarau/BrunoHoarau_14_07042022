@@ -1,6 +1,8 @@
+import './Button.css'
+
 const Button = () => {
 	return(
-			<div>
+			<div className="buttonSubmit">
 				<button
 					type="submit"
 					form="formRh"
