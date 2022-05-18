@@ -1,5 +1,13 @@
 import { useState } from "react"
 
+/**
+ * @param {number} key - key of elmt in map
+ * @param {string} type - type of input
+ * @param {string} name - name of input
+ * @param {Object} onChange - onChange evnt inherit
+ * @param {string} labelName - label of input
+ */
+
 const FormInput = ({key, type, name, id, onChange,  labelName}) => {
 	const [value, setValue] = useState('');
 	return(

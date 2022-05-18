@@ -1,4 +1,9 @@
 
+/**
+ * @param {string} name - name of select  
+ * @param {array} array - array of option 
+ * @param {object} onChange - onChange event inherit
+ */
 const FormSelect = ({name, array, onChange}) => {
 	return(
 		<>

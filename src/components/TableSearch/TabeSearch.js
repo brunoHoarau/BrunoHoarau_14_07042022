@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
+
+/**
+ * @param {object} onChange event inherit 
+ */
+
 const TableSearch = ({onChange}) => {
 	const [value,setValue] = useState('')
 	let employees = useSelector( state => state.employee)

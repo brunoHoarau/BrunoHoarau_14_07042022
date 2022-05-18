@@ -1,4 +1,32 @@
-import React, { Fragment, useEffect, useMemo, useRef, useState } from "react"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Table/Table.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Table/Table.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import './Table.css'
 import TableSearch from "../TableSearch/TabeSearch"
@@ -20,13 +48,13 @@ const Table = () => {
 	
 	const range = []
 	const countPage = Math.ceil( (list.length) / parPage )
-	for (let i = 1; i <= countPage; i++) {
+	for (let i = 1; i &lt;= countPage; i++) {
 		range.push(i);
 	}
 
 
 	/**
-	 * <tBody> Show list of employee per page 
+	 * &lt;tBody> Show list of employee per page 
 	 * @param { Array.object} list - list of employees
 	 * @param { number } - sliceStart - start of slice
 	 * @param { number } - sliceEnd - end of slice
@@ -34,72 +62,72 @@ const Table = () => {
 
 	const TableBody = ({list, sliceStart, sliceEnd}) => {
 		return(
-			<tbody>
+			&lt;tbody>
 				{ list.length ? list.slice(sliceStart, sliceEnd).map( (elmt, key) =>{
 						return(
-							<tr className="trBody" key={key}>
-								<td>{elmt.firstName}</td>
-								<td>{elmt.lastName}</td>
-								<td>{elmt.startDate}</td>
-								<td>{elmt.department}</td>
-								<td>{elmt.birthDate}</td>
-								<td>{elmt.street}</td>
-								<td>{elmt.city}</td>
-								<td>{elmt.state}</td>
-								<td>{elmt.zipCode}</td>
-							</tr>
+							&lt;tr className="trBody" key={key}>
+								&lt;td>{elmt.firstName}&lt;/td>
+								&lt;td>{elmt.lastName}&lt;/td>
+								&lt;td>{elmt.startDate}&lt;/td>
+								&lt;td>{elmt.department}&lt;/td>
+								&lt;td>{elmt.birthDate}&lt;/td>
+								&lt;td>{elmt.street}&lt;/td>
+								&lt;td>{elmt.city}&lt;/td>
+								&lt;td>{elmt.state}&lt;/td>
+								&lt;td>{elmt.zipCode}&lt;/td>
+							&lt;/tr>
 						)
 					} )  : "DatanotFount" 
 				}
-			</tbody>
+			&lt;/tbody>
 		)
 	}
 	
 
 	/**
-	 * <thead> show the head of table from array
+	 * &lt;thead> show the head of table from array
 	 *  @param { Array.object} accessor - list of headind columns
 	 */
 	const TableHead = ({
 		accessor
 	}) => {
 		/**
-		 * <th> Show label of column
+		 * &lt;th> Show label of column
 		 * @param {object} label column
 		 */
 		const Th = ({label}) =>{
 			console.log(label)
 			const handleSortBy= (accessor, pair) =>{
 				const modulo = pair % 2
-			const sorted = employees.sort((a,b)=>{ if(a[accessor].toString() < b[accessor].toString()) { return modulo ? -1 : 1; }
+			const sorted = employees.sort((a,b)=>{ if(a[accessor].toString() &lt; b[accessor].toString()) { return modulo ? -1 : 1; }
 			if(a[accessor].toString() > b[accessor].toString()) { return modulo ? 1 : -1; }
 			return 0;} )
 			setList(sorted)
 				}
  		return(
-			<th scope="col" id={label.accessor} 
+			&lt;th scope="col" id={label.accessor} 
 			onClick={ () => {
 				setPair(pair + 1)
 				handleSortBy(label.accessor, pair)
 			}}
 			className={"asc"}
-		>{label.name}</th>
+		>{label.name}&lt;/th>
 		 )
 	}
 
 		return(
-			<thead>
-				<tr> 
+			&lt;thead>
+				&lt;tr> 
 						{
 						accessor.map( (label, key) => {
 							return( 
-							<Fragment key={key}>
-								<Th label={label} />
-							</Fragment>
+							&lt;Fragment key={key}>
+								&lt;Th label={label} />
+							&lt;/Fragment>
 								)
 						} )}
-		    </tr>
-			</thead>
+		    &lt;/tr>
+			&lt;/thead>
 		)		
 	}
 
@@ -133,7 +161,7 @@ const Table = () => {
 		let prevRes = []
 		state.find( (elmt, index) => {
 			for( let [key, item] of Object.entries(elmt)){
-				if(typeof item === "string" && item.toLocaleLowerCase().includes(value.toLocaleLowerCase())){
+				if(typeof item === "string" &amp;&amp; item.toLocaleLowerCase().includes(value.toLocaleLowerCase())){
 					prevRes.splice(resultat.length, 0, elmt)
 				}
 				resultat = [...new Set(prevRes)]
@@ -165,59 +193,59 @@ const Table = () => {
 	}
 	
 	return( 
-				<div className="main">
-					<div className="header-table"> 
-						<label>Show 
-							<select name="employee-table_length" aria-controls="employee-table" 
+				&lt;div className="main">
+					&lt;div className="header-table"> 
+						&lt;label>Show 
+							&lt;select name="employee-table_length" aria-controls="employee-table" 
 							onChange={ (e) =>{ 
 								handleParPage(e.target.value);
 							} }
 							>
 								{ [10,25,50,100].map( (elmt, key) => {
-									return( <option value={elmt} key={key} >{elmt}</option>)
+									return( &lt;option value={elmt} key={key} >{elmt}&lt;/option>)
 								})}
-							</select> 
-						entries</label>
-						<div id="employee-table_filter" className="dataTables_filter">
-							<label>Search: 
-								<TableSearch
+							&lt;/select> 
+						entries&lt;/label>
+						&lt;div id="employee-table_filter" className="dataTables_filter">
+							&lt;label>Search: 
+								&lt;TableSearch
 									onChange={(value) => {
 										setPage(1)
 										handleSearch(value)
 									}}
 								/>
-							</label>
-						</div>
-					</div>
-					<table id="employee-table" className="display">
-						<TableHead 
+							&lt;/label>
+						&lt;/div>
+					&lt;/div>
+					&lt;table id="employee-table" className="display">
+						&lt;TableHead 
 							accessor={accessor}
 							list={list}
 						/>
-						<TableBody list={list} sliceEnd={sliceEnd} sliceStart={sliceStart} />
-					</table>
-						<div className="tfooter">
-							<div>
-								<p>Showing { page === 1 ? "1" : sliceStart+ 1} to {sliceEnd} of {page === 1 ? list.length : employees.length  } entries</p>
-							</div>
-							<div className="pagination">
+						&lt;TableBody list={list} sliceEnd={sliceEnd} sliceStart={sliceStart} />
+					&lt;/table>
+						&lt;div className="tfooter">
+							&lt;div>
+								&lt;p>Showing { page === 1 ? "1" : sliceStart+ 1} to {sliceEnd} of {page === 1 ? list.length : employees.length  } entries&lt;/p>
+							&lt;/div>
+							&lt;div className="pagination">
 								{
 									range.length !== 1 ? range.map( (elmt, key) => { 
 										return( 
-											<button 
+											&lt;button 
 											onClick={() => {
 												setPage(elmt);
 												handlePagination(elmt, list)
 											}}
 											className={ page === elmt ? "paginationUnable" : "paginationDisable"}
 											disabled={ page === elmt ? true : false } 
-											key={key}>{elmt}</button>
+											key={key}>{elmt}&lt;/button>
 											)
 										}) : ""
 								}
-							</div>
-						</div>
-				</div>
+							&lt;/div>
+						&lt;/div>
+				&lt;/div>
 		
 			)
 }
@@ -225,3 +253,26 @@ const Table = () => {
 export default Table
 
 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#FormInput">FormInput</a></li><li><a href="global.html#FormSelect">FormSelect</a></li><li><a href="global.html#reducer">reducer</a></li><li><a href="global.html#TableSearch">TableSearch</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Wed May 18 2022 20:39:11 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
