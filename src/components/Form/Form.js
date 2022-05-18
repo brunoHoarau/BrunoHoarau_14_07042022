@@ -10,7 +10,6 @@ import personInfos from '../../constant/PersonInfos';
 import Modal from 'modal-library-react-hb/dist/Modal'; // Library Npm imported
 
 const Form = () => {
-	
 	const [viewModal, setViewModal] = useState(false)
 	const [state, setState] = useState(
 		{
